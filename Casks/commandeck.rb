@@ -1,6 +1,6 @@
 cask "commandeck" do
-  version "0.1.2"
-  sha256 "f77dbb4da20c87e43fe80570430f465f43d37b5f6afbe2921c76e75c910dd2dd"
+  version "0.2.0"
+  sha256 "d434d7f3341650e152f0469b79defa08a7bf352f8141e91eb8a2eecd23875c59"
 
   url "https://github.com/Priyans-hu/commandeck/releases/download/v#{version}/CommanDeck_#{version}_aarch64.dmg"
   name "CommanDeck"
@@ -12,9 +12,7 @@ cask "commandeck" do
   app "CommanDeck.app"
 
   postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/CommanDeck.app"],
-                   sudo: false
+    system_command "/usr/bin/xattr", args: ["-cr", "#{appdir}/CommanDeck.app"], sudo: false
   end
 
   zap trash: [
@@ -23,3 +21,4 @@ cask "commandeck" do
     "~/Library/Preferences/com.commandeck.app.plist",
   ]
 end
+

@@ -11,6 +11,12 @@ cask "commandeck" do
 
   app "CommanDeck.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/CommanDeck.app"],
+                   sudo: false
+  end
+
   zap trash: [
     "~/Library/Application Support/com.commandeck.app",
     "~/Library/Caches/com.commandeck.app",

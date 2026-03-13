@@ -11,6 +11,10 @@ cask "commandeck" do
 
   app "CommanDeck.app"
 
+  preflight do
+    system_command "/usr/bin/xattr", args: ["-cr", "#{staged_path}/CommanDeck.app"], sudo: false
+  end
+
   postflight do
     system_command "/usr/bin/xattr", args: ["-cr", "#{appdir}/CommanDeck.app"], sudo: false
   end

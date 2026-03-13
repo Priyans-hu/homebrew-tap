@@ -1,6 +1,6 @@
 cask "commandeck" do
   version "0.1.2"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  sha256 "f77dbb4da20c87e43fe80570430f465f43d37b5f6afbe2921c76e75c910dd2dd"
 
   url "https://github.com/Priyans-hu/commandeck/releases/download/v#{version}/CommanDeck_#{version}_aarch64.dmg"
   name "CommanDeck"
